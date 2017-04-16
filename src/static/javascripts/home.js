@@ -1,5 +1,7 @@
+//home.js
+
 console.log('loaded home.bundle.js');
 
-setMsg = function() {
-  document.getElementById('msgBox').innerHTML = 'Hey nobber!';
+export default function test() {
+  console.log('words words words');
 }

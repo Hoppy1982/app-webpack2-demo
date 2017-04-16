@@ -1,0 +1,6 @@
+html body {
+  background-color: red; }
+  html body div {
+    background-color: blue;
+    width: 100px;
+    height: 100px; }
