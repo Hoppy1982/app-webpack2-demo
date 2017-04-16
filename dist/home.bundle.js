@@ -69,11 +69,8 @@
 /******/ ([
 /* 0 */,
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (immutable) */ __webpack_exports__["default"] = test;
 //home.js
 
 console.log('loaded home.bundle.js');
@@ -81,6 +78,15 @@ console.log('loaded home.bundle.js');
 function test() {
   console.log('words words words');
 }
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+
+    var button1 = document.getElementById('button1');
+    button1.addEventListener('click', function(){
+      console.log('words');
+    });
+  });
 
 
 /***/ })
