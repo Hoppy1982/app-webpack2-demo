@@ -1,5 +1,6 @@
 //my-test-module.js
 
+//Basic module to prove that browser side modules are working.
 module.exports.sayHi = function() {
   var msgBox = document.getElementById('msgBox');
 
