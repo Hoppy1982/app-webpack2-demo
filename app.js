@@ -4,8 +4,8 @@ var express = require('express');
 var app = express();
 
 app.set('view engine', 'pug');
-app.set('views', __dirname + '/views')
-app.use(express.static(__dirname + '/dist'));
+app.set('views', __dirname + '/dist/views')
+app.use(express.static(__dirname + '/dist/static'));
 
 app.listen(3000, function() {
   console.log('listening on 3000:');

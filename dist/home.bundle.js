@@ -60,33 +60,62 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/static";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
+/* 0 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-//home.js
+module.exports = "/static//views/home.pug";
 
-console.log('loaded home.bundle.js');
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
 
-function test() {
-  console.log('words words words');
+//my-test-module.js
+
+module.exports.sayHi = function() {
+  var msgBox = document.getElementById('msgBox');
+
+  msgBox.innerHTML = 'Hi me!';
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOM fully loaded and parsed");
 
-    var button1 = document.getElementById('button1');
-    button1.addEventListener('click', function(){
-      console.log('words');
-    });
+/***/ }),
+/* 3 */,
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+//home.js
+
+var pug = __webpack_require__(1);
+var css = __webpack_require__(0);
+var myTestModule = __webpack_require__(2);
+
+console.log('Hi from home.bundle.js');
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  console.log("DOM fully loaded and parsed");
+  assignOnClicks()
+});
+
+function assignOnClicks() {
+  var button1 = document.getElementById('button1');
+
+  button1.addEventListener('click', function(){
+    myTestModule.sayHi();
   });
+}
 
 
 /***/ })

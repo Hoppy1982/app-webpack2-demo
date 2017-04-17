@@ -1,0 +1,8 @@
+html {
+  background-color: red; }
+  html body {
+    background-color: lightblue; }
+    html body div {
+      width: 100px;
+      height: 100px;
+      background-color: lightgrey; }

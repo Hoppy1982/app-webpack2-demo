@@ -1,16 +1,20 @@
 //home.js
 
-console.log('loaded home.bundle.js');
+var pug = require('../../views/home.pug');
+var css = require('../stylesheets/home.scss');
+var myTestModule = require('./my-front-end-modules/my-test-module.js');
 
-function test() {
-  console.log('words words words');
-}
+console.log('Hi from home.bundle.js');
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOM fully loaded and parsed");
+  console.log("DOM fully loaded and parsed");
+  assignOnClicks()
+});
 
-    var button1 = document.getElementById('button1');
-    button1.addEventListener('click', function(){
-      console.log('words');
-    });
+function assignOnClicks() {
+  var button1 = document.getElementById('button1');
+
+  button1.addEventListener('click', function(){
+    myTestModule.sayHi();
   });
+}
