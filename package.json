@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "build-watch": "webpack --watch",
-    "start": "node app.js"
+    "dev": "webpack-dev-server --progress --colors",
+    "start": "webpack && npm run dev"
   },
   "keywords": [],
   "author": "",

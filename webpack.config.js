@@ -13,7 +13,7 @@ module.exports = {
   },
 
   output: {
-    filename: '[name].bundle.js',
+    filename: 'static/javascripts/[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/static'
   },
@@ -41,7 +41,7 @@ module.exports = {
     new browserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      server: { baseDir: ['dist']}
+      proxy: 'http://localhost:8080/'
     })
   ]
 
