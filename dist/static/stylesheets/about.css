@@ -1,0 +1,9 @@
+html {
+  background-color: green; }
+  html body {
+    background-color: grey; }
+    html body div {
+      width: 400px;
+      height: 200px;
+      background-color: blue;
+      color: pink; }

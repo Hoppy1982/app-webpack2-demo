@@ -1,4 +1,4 @@
-//home.js
+//home.bundle.js
 
 var pug = require('../../views/home.pug');
 var css = require('../stylesheets/home.scss');
