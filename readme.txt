@@ -1,5 +1,10 @@
 //README
 
+As basic as I could make it app using express, pug, webpack.
+Just for using modules in the brower, scss to css and browser sync.
+
+
+
 To get up and running with browser sync.
 
 1. From cli, "npm build".
